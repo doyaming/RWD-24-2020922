@@ -6,34 +6,34 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="res.html" method="post">
+    <form action="res.html" method="get">
     <label>性別</label>
     <label for="male">
-        <input type="radio" id="male" name="gender">男
+        <input type="radio" id="male" name="gender" value="男">男
     </label>
     <label for="female">
-        <input type="radio" id="female" name="gender">女
+        <input type="radio" id="female" name="gender" value="女">女
     </label>
 <br>
     <!-- 差別在點選字能選取 -->
     <label>性別</label>
-    <input type="radio" name="gender2" id="male2">
+    <input type="radio" name="gender2" id="male2" value="男">
     <label>男</label>
-    <input type="radio" name="gender2" id="female2">
+    <input type="radio" name="gender2" id="female2" value="女">
     <label>女</label>
 <br>
     <!-- 多選鈕CHECKBOX -->
     <label>專長</label>
     <label for="design">
-        <input type="checkbox" name="skills" id="design">
+        <input type="checkbox" name="skills" id="design" value="平面設計">
         平面設計
     </label>
     <label for="web">
-        <input type="checkbox" name="skills" id="web">
+        <input type="checkbox" name="skills" id="web" value="網頁設計">
         網頁設計
     </label>
     <label for="video">
-        <input type="checkbox" name="skills" id="video">
+        <input type="checkbox" name="skills" id="video" value="影片剪輯">
         影片剪輯
     </label>
 
@@ -41,17 +41,26 @@
     <!-- 下拉選單 -->
     <label for="edu">學歷</label>
     <select name="edu" id="edu">
-        <option value="">國小</option>
-        <option value="">國中</option>
-        <option value="">高中職</option>
-        <option value="">大專院校</option>
-        <option value="">研究所以上</option>
+        <option value="國小">國小</option>
+        <option value="國中">國中</option>
+        <option value="高中職">高中職</option>
+        <option value="大專院校">大專院校</option>
+        <option value="研究所以上">研究所以上</option>
     </select>
 
     <br>
     <!-- 評論文字框 -->
     <label for="comment">評論</label>
     <textarea name="comment" id="comment" cols="60" rows="5"></textarea>
+
+    <br>
+    <!-- 按鈕功能 -->
+    <input type="submit" value="送出">
+    <input type="reset">
+    <input type="button" value="自訂義按鈕">
+    <!-- <button type="submit" >送出</button> -->
+    <!-- <button type="reset" >重設</button> -->
+    <!-- <button type="button" >自訂義按鈕</button> -->
 
 </form>
 </body>
