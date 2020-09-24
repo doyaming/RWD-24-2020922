@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="res.html" method="post">
+    <label>性別</label>
+    <label for="male">
+        <input type="radio" id="male" name="gender">男
+    </label>
+    <label for="female">
+        <input type="radio" id="female" name="gender">女
+    </label>
+<br>
+    <!-- 差別在點選字能選取 -->
+    <label>性別</label>
+    <input type="radio" name="gender2" id="male2">
+    <label>男</label>
+    <input type="radio" name="gender2" id="female2">
+    <label>女</label>
+<br>
+    <!-- 多選鈕CHECKBOX -->
+    <label>專長</label>
+    <label for="design">
+        <input type="checkbox" name="skills" id="design">
+        平面設計
+    </label>
+    <label for="web">
+        <input type="checkbox" name="skills" id="web">
+        網頁設計
+    </label>
+    <label for="video">
+        <input type="checkbox" name="skills" id="video">
+        影片剪輯
+    </label>
+
+    <br>
+    <!-- 下拉選單 -->
+    <label for="edu">學歷</label>
+    <select name="edu" id="edu">
+        <option value="">國小</option>
+        <option value="">國中</option>
+        <option value="">高中職</option>
+        <option value="">大專院校</option>
+        <option value="">研究所以上</option>
+    </select>
+
+    <br>
+    <!-- 評論文字框 -->
+    <label for="comment">評論</label>
+    <textarea name="comment" id="comment" cols="60" rows="5"></textarea>
+
+</form>
+</body>
+</html>
