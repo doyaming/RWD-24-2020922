@@ -21,21 +21,43 @@ p{
 }
 h1{
     text-align: center;
+    /* 讓區塊內置中行內無法使用,須在外圍包區塊如
+    /* <div class="link">
+        <a href="#">link</a>
+       </div> */
 }
 li{
     text-align: left;
+    /* 文字大小設定 
+    預設16PX = 12pt = 1em = 1rem = 100%
+    絕對單位:px,pt
+    相對單位:em,rem,100%
+    font-size: 16px;
+    font-size: 1rem;
+    font-size: 1em; 
+    */
+    font-size: 25pt;
 }
 ul{
     text-align: center;
 }
 h2{
     text-align: center;
+    font-family: "標楷體";
+
+}
+.link{
+    text-align: center;
 }
 </style>
 <body>
+    <div class="link">
+        <a href="http://www.google.com.tw"> google link</a>
+    </div>
+
     <h1>title</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, quae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi libero consectetur aut, quod earum, suscipit explicabo delectus debitis, optio laborum eius reprehenderit. Tempora repellat placeat sunt sed, reprehenderit maiores saepe provident doloremque quasi, distinctio dolorum. Mollitia neque magnam id facere laboriosam corrupti, numquam dolorem voluptatum expedita harum ad voluptates quasi commodi quia illo, eveniet autem maiores non ea consequatur? Illo, eveniet fugiat quo optio obcaecati pariatur eum? Quia dicta cumque aliquid voluptatem, possimus inventore rerum sit? Dignissimos commodi porro nisi. Corporis, magnam est quidem distinctio, sit eius nihil, perspiciatis ullam veniam ipsa </p>
-    <h2>title2</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.        Repudiandae, quae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi libero consectetur aut, quod earum, suscipit explicabo delectus debitis, optio laborum eius reprehenderit. Tempora repellat placeat sunt sed, reprehenderit maiores saepe provident doloremque quasi, distinctio dolorum. Mollitia neque magnam id facere laboriosam corrupti, numquam dolorem voluptatum expedita harum ad voluptates quasi commodi quia illo, eveniet autem maiores non ea consequatur? Illo, eveniet fugiat quo optio obcaecati pariatur eum? Quia dicta cumque aliquid voluptatem, possimus inventore rerum sit? Dignissimos commodi porro nisi. Corporis, magnam est quidem distinctio, sit eius nihil, perspiciatis ullam veniam ipsa </p>
+    <h2>title2 臺灣人你在收藏休閒因為能夠</h2>
     <p>
         Lorem ipsum dolor sit amet.
         Lorem ipsum dolor sit amet.
