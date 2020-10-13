@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* 第一步 將父元素font-size設定為0*/
+            font-size: 0;
+        }
+        .box {
+            width: 200px;
+            background-image: linear-gradient( 135deg, #FFF886 10%, #F072B6 100%);
+            padding: 15px;
+        
+            display: inline-block;
+            /* 第二步 還原文字*/
+            font-size: 16px;
+
+            /* 第三部 設定垂直對齊 */
+            vertical-align: top;
+            /* top,bottom,middle,baseline */
+            /* 只能使用在 inline-block與table */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam quo architecto veniam ratione accusantium omnis eum ex quaerat, aspernatur vero. Tempora expedita recusandae placeat earum perspiciatis consequatur in eveniet animi.
+    </div>
+    <div class="box">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, quo?
+    </div>
+    <div class="box">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio ut illo amet fugit eum omnis quidem nostrum doloribus provident veritatis.
+    </div>
+    <div class="box">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, sapiente molestiae minus odio blanditiis libero.    </div>
+</body>
+</html>
