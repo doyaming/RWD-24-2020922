@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "Segoe UI";
+        }
+        .container {
+            display: flex;
+            width: 1200px;
+            margin: auto;
+            background-image: linear-gradient( 135deg, #F97794 10%, #623AA2 100%);
+        }
+        .box {
+            padding: 15px;
+        }
+        .box:nth-of-type(1) {
+            /* order: 2; */
+        }
+        .box:nth-of-type(2) {
+            /* order: 3; */
+        }
+        .box:nth-of-type(3) {
+            /* order: 4; */
+        }
+        .box:nth-of-type(4) {
+            /* order: 1; */
+        }
+
+        footer {
+            display: flex;
+            background-color: #ccc;
+        }
+        .item {
+            width:calc(100% / 5);
+        }
+        img {
+            width: 100%;
+        }
+        .item:nth-of-type(1){
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem itaque officia repellat dolore distinctio excepturi voluptate. Nostrum beatae quisquam quae. Nemo libero fugit expedita animi corporis aliquid soluta et necessitatibus?
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem itaque officia repellat dolore distinctio excepturi voluptate. Nostrum beatae quisquam quae. Nemo libero fugit expedita animi corporis aliquid soluta et necessitatibus?
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem itaque officia repellat dolore distinctio excepturi voluptate. Nostrum beatae quisquam quae. Nemo libero fugit expedita animi corporis aliquid soluta et necessitatibus?
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 4</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem itaque officia repellat dolore distinctio excepturi voluptate. Nostrum beatae quisquam quae. Nemo libero fugit expedita animi corporis aliquid soluta et necessitatibus?
+            </p>
+        </div>
+    </div>
+    <footer>
+        <div class="item">
+            <img src="https://picsum.photos/id/69/300/100" alt="">
+        </div>
+        <div class="item">
+            <ul>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+            </ul>
+        </div>
+        <div class="item">
+            <ul>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+            </ul>
+        </div>
+        <div class="item">
+            <ul>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+            </ul>
+        </div>
+        <div class="item">
+            <ul>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
