@@ -1,0 +1,11 @@
+header {
+    background: url("https://picsum.photos/id/90/1600/800") center center no-repeat;
+    background-size: cover;
+    height: 800px;
+}
+header h1 {
+    font-size: 80px;
+}
+header p {
+    font-size: 22px;
+}
