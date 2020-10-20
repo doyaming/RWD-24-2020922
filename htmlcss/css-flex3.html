@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        box-sizing: border-box;
+        font-family:"Gill Sans mt"
+    }
+.container{
+    display:flex;
+    width:1200px;
+    margin: auto;
+    background-color:aliceblue;
+}
+.box{
+    /* width:calc(100% /3); */
+/* flex-basis: 300px; */
+flex-basis: 500px;
+padding: 15px;
+background-color: #0093E9;
+background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+.box:nth-of-type(1){
+    /* flex-grow: 1; */
+    flex-shrink: 1;
+}
+.box:nth-of-type(2){
+    /* flex-grow: 1; */
+    flex-shrink: 10;
+}
+.box:nth-of-type(3){
+    /* flex-grow: 1; */
+    flex-shrink: 1;
+}
+/* flex-grow */
+/* 1200-900= 300 剩餘空間
+300*(1/1+10+1)=25 300+25=325
+300*(10/1+10+1)=250 300+250=550
+300*(1/1+10+1)=25  300+25=325
+/* flex-grow:預設為關閉如需打開設定為1 */
+
+/* flex-shrink */
+/* 1200-1500=-300不夠空間
+300*(1/1+10+1)=25  500-25=475
+300*(10/1+10+1)=250 500-250=250
+300*(1/1+10+1)=25  500-25=475 */
+
+
+
+</style>
+</head>
+<body>
+<div class="container">
+<div class="box">   
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia 
+頻道篇文章專門鏡頭同學更新廣泛，臺灣民。
+</div>
+<div class="box">   
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia 
+    分別專輯，記憶大師，評論你說困難大廈電力，政府管理，好多藥。
+</div>
+<div class="box">   
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia 
+        汽車走勢合作賺錢嘿嘿國人安徽瞭解房價明年，財務公開重點收費，藥品一直輕鬆防治使。
+</div>
+
+</div>
+</body>
+</html>
