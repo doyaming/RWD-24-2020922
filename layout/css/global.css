@@ -1,16 +1,29 @@
+:root {
+    --blue: #0890ff;
+    --red: #ff2b2b;
+    --green: #009c1a;
+    --orange: #ffbb00;
+    --yellow: #ffe608;
+    --dark: #1b1b1b;
+    --light: #dfdfdf;
+    --spacing: 10px;
+}
 * {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
-    font-family: "Gill Sans MT","Microsoft Jhenghei";
+    font-family: "Segoe UI","Microsoft Jhenghei";
 }
 table {
     border-collapse: collapse;
 }
 
 img {
-    width: 100%;
+    /* width: 100%; */
+    /* display: block; */
+    vertical-align: top;
+    /* 圖片下方空格BUG去除 */
 }
 .w100 {
     width: 100%;
@@ -56,14 +69,91 @@ img {
     color: #000;
 }
 /* color */
-.bg-blue {background-color: #0890ff;}
+.bg-blue {background-color: var(--blue);}
+.bg-red {background-color: var(--red);}
 .bg-white {background-color: #fff;}
-.bg-light {background-color: #dfdfdf;}
+.bg-light {background-color: var(--light);}
 .bg-black {background-color: #000;}
-.bg-dark {background-color: #1b1b1b;}
+.bg-dark {background-color: var(--dark);}
 
-.t-blue {color:#0890ff;}
+
+.t-blue {color:var(--blue);}
+.t-red {color:var(--red);}
 .t-white {color:#fff;}
-.t-light {color:#dfdfdf;}
+.t-light {color: var(--light);}
 .t-black {color:#000;}
-.t-dark {color:#1b1b1b;}
+.t-dark {color: var(--dark);}
+
+/* spacing */
+.m0 {margin: 0;}
+.m1 {margin: calc(1 * var(--spacing));}
+.m2 {margin: calc(2 * var(--spacing));}
+.m3 {margin: calc(3 * var(--spacing));}
+.mauto{margin: auto;}
+.mt0 {margin-top: 0;}
+.mt1 {margin-top: calc(1 * var(--spacing));}
+.mt2 {margin-top: calc(2 * var(--spacing));}
+.mt3 {margin-top: calc(3 * var(--spacing));}
+.mb0 {margin-bottom: 0;}
+.mb1 {margin-bottom: calc(1 * var(--spacing));}
+.mb2 {margin-bottom: calc(2 * var(--spacing));}
+.mb3 {margin-bottom: calc(3 * var(--spacing));}
+.mr0 {margin-right: 0;}
+.mr1 {margin-right: calc(1 * var(--spacing));}
+.mr2 {margin-right: calc(2 * var(--spacing));}
+.mr3 {margin-right: calc(3 * var(--spacing));}
+.mrauto {margin-right: auto;}
+.ml0 {margin-left: 0;}
+.ml1 {margin-left: calc(1 * var(--spacing));}
+.ml2 {margin-left: calc(2 * var(--spacing));}
+.ml3 {margin-left: calc(3 * var(--spacing));}
+.mlauto {margin-left: auto;}
+.mx0 {margin-left: 0;margin-right: 0;}
+.mx1 {margin-left: calc(1 * var(--spacing));margin-right: calc(1 * var(--spacing));}
+.mx2 {margin-left: calc(2 * var(--spacing));margin-right: calc(2 * var(--spacing));}
+.mx3 {margin-left: calc(3 * var(--spacing));margin-right: calc(3 * var(--spacing));}
+.mxauto {margin-left: auto;margin-right: auto;}
+.my0 {margin-top: 0;margin-bottom: 0;}
+.my1 {margin-top: calc(1 * var(--spacing));margin-bottom: calc(1 * var(--spacing));}
+.my2 {margin-top: calc(2 * var(--spacing));margin-bottom: calc(2 * var(--spacing));}
+.my3 {margin-top: calc(3 * var(--spacing));margin-bottom: calc(3 * var(--spacing));}
+.myauto {margin-top: auto;margin-bottom: auto;}
+
+.p0 {padding: 0;}
+.p1 {padding: calc(1 * var(--spacing));}
+.p2 {padding: calc(2 * var(--spacing));}
+.p3 {padding: calc(3 * var(--spacing));}
+.pauto{padding: auto;}
+.pt0 {padding-top: 0;}
+.pt1 {padding-top: calc(1 * var(--spacing));}
+.pt2 {padding-top: calc(2 * var(--spacing));}
+.pt3 {padding-top: calc(3 * var(--spacing));}
+.pb0 {padding-bottom: 0;}
+.pb1 {padding-bottom: calc(1 * var(--spacing));}
+.pb2 {padding-bottom: calc(2 * var(--spacing));}
+.pb3 {padding-bottom: calc(3 * var(--spacing));}
+.pr0 {padding-right: 0;}
+.pr1 {padding-right: calc(1 * var(--spacing));}
+.pr2 {padding-right: calc(2 * var(--spacing));}
+.pr3 {padding-right: calc(3 * var(--spacing));}
+.prauto {padding-right: auto;}
+.pl0 {padding-left: 0;}
+.pl1 {padding-left: calc(1 * var(--spacing));}
+.pl2 {padding-left: calc(2 * var(--spacing));}
+.pl3 {padding-left: calc(3 * var(--spacing));}
+.plauto {padding-left: auto;}
+.px0 {padding-left: 0;padding-right: 0;}
+.px1 {padding-left: calc(1 * var(--spacing));padding-right: calc(1 * var(--spacing));}
+.px2 {padding-left: calc(2 * var(--spacing));padding-right: calc(2 * var(--spacing));}
+.px3 {padding-left: calc(3 * var(--spacing));padding-right: calc(3 * var(--spacing));}
+.pxauto {padding-left: auto;padding-right: auto;}
+.py0 {padding-top: 0;padding-bottom: 0;}
+.py1 {padding-top: calc(1 * var(--spacing));padding-bottom: calc(1 * var(--spacing));}
+.py2 {padding-top: calc(2 * var(--spacing));padding-bottom: calc(2 * var(--spacing));}
+.py3 {padding-top: calc(3 * var(--spacing));padding-bottom: calc(3 * var(--spacing));}
+.pyauto {padding-top: auto;padding-bottom: auto;}
+
+/* hr */
+hr {
+    border-bottom: 1px solid var(--light);
+}

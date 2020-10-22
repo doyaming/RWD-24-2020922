@@ -9,3 +9,55 @@ header h1 {
 header p {
     font-size: 22px;
 }
+
+/* about */
+#about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+#about h2 {
+    font-size: 45px;
+}
+#about h3 {
+    font-size: 28px;
+}
+
+
+/* service */
+#service {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: linear-gradient( 135deg, #FFF886 10%, #F072B6 100%);}
+#service h2 {
+    font-size: 45px;
+}
+#service h3 {
+    font-size: 28px;
+}
+#service hr {
+    border-color: var(--dark);
+}
+/* 聯繫資訊 */
+#contact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+#contact h2 {
+    font-size: 45px;
+}
+#contact li {
+    font-size: 20px;
+}
+#contact i {
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    vertical-align: middle;
+}
+#contact .sns i {
+    width: auto;
+    margin-right: 10px;
+}
+li {
+    list-style: none;
+}

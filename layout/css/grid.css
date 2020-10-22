@@ -9,6 +9,10 @@
     display: flex;
     flex-wrap: wrap;
 }
+.col{
+    flex:1 0 1%;
+    /* 五等份區塊使用 */
+}
 .col-1 {
     flex: 0 0 calc(100% / 12 * 1);
     /* flex: [grow] [shrink] [basis] */
