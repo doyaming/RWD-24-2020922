@@ -1,3 +1,40 @@
+nav {
+    width: 100%;
+    height: 60px;
+    background-color: #060930;
+    display: flex;
+    align-items: center;
+}
+.nav-logo {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    color: #ececec;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+.nav-button {
+    display: none;
+}
+.nav-toggle-menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-menu {
+    display: flex;
+}
+.nav-link {
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #ececec;
+}
+
+
+
 header {
     background: url("https://picsum.photos/id/90/1600/800") center center no-repeat;
     background-size: cover;
