@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #e7709d8f;
+            
+            /* transition-property: all; */
+            /* transition-duration: 500ms; */
+            /* transition-delay: 3s; */
+            /* transition: all 1s; */
+
+            /* transition-property: width, height, background-color; */
+            /* transition-duration: 1s; */
+            /* transition-delay: 0s, 1s, 2s; */
+            transition: width 1s 0s, height 1s 1s, background-color 1s 2s;
+
+        
+        }
+        /* 虛擬類別（偽類別） */
+        .box:hover {
+            background-color: #fbe16f5d;
+            width: 100%;
+            height: 1024px;
+        }
+        body {
+            background-image: url("https://picsum.photos/id/80/2000");
+        }
+        p{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Transition 過場、轉場</h1>
+    <div class="box"> 
+<p> 生物藝術然後普通中港路，一大窗口計算你。</p>
+
+    </div>
+</body>
+</html>
