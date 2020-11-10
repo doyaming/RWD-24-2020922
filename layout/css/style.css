@@ -35,7 +35,24 @@ nav {
     padding-left: 10px;
     padding-right: 10px;
     color: #ececec;
+    position: relative;
 }
+.nav-link::after {
+    content:"";
+    border-bottom: 2px solid #ececec;
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    left: 0;
+    bottom: -5px;
+    transition: 400ms;
+}
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+
 
 
 header {
@@ -121,3 +138,28 @@ li {
     position: relative;
     top: -3px;
 }
+
+/* animation */
+
+@keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fade-left-in {
+    from {opacity: 0;transform: translateX(-100%);}
+    to {opacity: 1;transform: translateX(0);}
+}
+.fade-in {
+    animation: fade-in 500ms; 
+}
+.fade-in-1 {
+    animation: fade-in 1s; 
+}
+.fade-left-in {
+    animation: fade-left-in 500ms; 
+}
+.fade-left-in-1 {
+    animation: fade-left-in 1s; 
+}
+

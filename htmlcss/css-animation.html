@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:100px;
+            height:100px;
+            background-color:rgba(87, 87, 165, 0.568);
+            transform-origin: left;
+
+            /* animation-name: move;
+            animation-duration: 5s;
+            animation-delay: 0s;
+            animation-iteration-count:3 ;
+            /* 循環動畫次數 infinite無限循環 */
+            /* animation-fill-mode: forwards;
+            /* 停到終點1走到5停止 */
+            /* animation-direction:alternate-reverse ; */
+            /* reverse, alternate, alternate-reverse */
+            /* animation-play-state: paused; */
+            /* 啟動開關 */
+            /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);  */
+            /* 縮寫 */
+            /* animation: move 2s 0s alternate infinite ease-in-out; */
+            animation: move 2s infinite forwards ease;
+            
+
+
+        }
+        @keyframes move{
+            from {transform:scale(1);}
+            to{transform:scale(5);}
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    
+</body>
+</html>
