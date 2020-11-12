@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = new Array();
+        a[0] = 'Apple';
+        a[1] = 'Banana';
+        a[2] = 'Cat';
+        //索引值
+
+        let b = ['Apple','Banana','Cat'];
+        // console.log(b);
+
+        //陣列迭代
+        console.log(b.length);
+        for (let i = 0; i < b.length; i++){
+            console.log(b[i]);
+        }
+        //for in 取出陣列索引值
+         for(let idx in b){
+            console.log(b[idx]);
+        }
+        //for of 取出陣列內容值
+        for(let item of b){
+            console.log(item); 
+        }
+        //forEach方法
+        b.forEach(function(item,idx){
+            console.log(item,idx);
+        });
+
+        const drinks = ['紅茶','綠茶','奶茶','波霸奶茶','冰淇淋紅茶'];
+        /*push 往後增加一個*/
+        drinks.push('拿鐵');
+        /*pop 往後移除一個*/
+        drinks.pop();
+        /*unshift 往前增加一個*/
+        drinks.unshift('水');
+        /*shift 往前移除一個*/
+        drinks.shift();
+        
+        // drinks[drinks.length] = '摩卡';
+        // drinks.length為新增一個值
+        // drinks[drinks.length] = '焦糖瑪奇朵';
+        // drinks.length = 0 陣列清空
+        // drinks.length = 0;
+
+        //splice 拼接或當移除某個值使用
+        // drinks.splice(2,1,'鮮奶茶','波霸鮮奶茶');
+        // 等於陣列第二個開始移除一個並新增'鮮奶茶','波霸鮮奶茶'
+        // drinks.splice(2,1);
+        // 等於移除第二個開始一個值
+        // drinks.splice(4,1);
+        // 等於移除第四個開始一個值
+        // console.log(drinks);
+
+        //slice 切片 以逗點計算取道逗點第幾個
+        // 例如 ["紅茶", "綠茶", "奶茶", "波霸奶茶", "冰淇淋紅茶"]
+        // slice(1,4)結果為["綠茶", "奶茶", "波霸奶茶"]
+        // 使用slice須給一個新陣列值
+        // const d = drinks.slice(1,4);
+        // console.log(drinks);
+        // console.log(d);
+        for(let drink of drinks){
+            console.log(drink);
+        }
+        drinks.forEach(function(item,idx){
+            console.log(item,idx);
+        });
+
+
+
+    </script>
+</body>
+</html>
