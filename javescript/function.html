@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //宣告 test函式
+        // 函式表達式 function expression
+        // function test(){
+        //     console.log('test');
+        // }
+        // function square(x){
+        //     console.log(x * x);
+        // }
+        // square(11);
+        //有提升性
+
+        // 函式宣告式 function decalare
+        // let test = function(){
+        //     console.log('test');
+        // }
+        // test();
+        
+
+        // let square = function(x){
+        //     console.log(x*x);
+        // }
+        // square(12);
+        //沒有提升性
+
+
+        let title = function(){
+            return 'Hello World';
+        }
+        let square = function(x){
+           if(x > 100){
+               return 'error';
+           }else{
+               return x*x;
+               //中止執行
+           }
+
+        }
+        let answer = square(12);
+        console.log(answer);
+    </script>
+</body>
+</html>
