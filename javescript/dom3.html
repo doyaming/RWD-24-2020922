@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button onclick="add()">CLICK</button>
+    <div id="output" class="output"></div>
+    <script>
+        function add(){
+            let input = document.querySelector('input').value;
+            // alert(input);
+            document.getElementById('output').textContent = input;
+            // document.querySelector('.output').textContent = input;
+            // document.getElementsByClassName('output')[0].textContent = input;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btns" id="btn">CLICK</button>
+    <button class="btns" onclick="test()">CLICK 2</button>
+    <!-- <button class="btns">CLICK 3</button> -->
+    <script>
+        //抓id 
+        let b = document.getElementById('btn');
+        // let b = document.querySelector('#btn');
+        
+        //抓單一class
+        // let b = document.getElementsByClassName('btns')[0];
+        // let b = document.querySelector('.btns');
+        // let b = document.querySelectorAll('.btns')[0];
+        
+        //抓多個class
+        // let b = document.getElementsByClassName('btns');
+        // let b = document.querySelectorAll('.btns');
+
+        //抓單一tag
+        // let b = document.getElementsByTagName('button')[0];
+        // let b = document.querySelector('button');
+        // let b = document.querySelectorAll('button')[0];
+       
+        //抓多個tag
+        // let b = document.getElementsByTagName('button');
+        // let b = document.querySelectorAll('button')[0];
+        
+        function test(){
+            alert('Hello Javascript!!!!!');
+        }
+
+        b.onclick = function(){
+            test();
+        }
+    </script>
+</body>
+</html>
