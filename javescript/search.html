@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="search"  onkeyup="search()">
+    <ul>
+        <li>熟成紅茶</li>
+        <li>麗春紅茶</li>
+        <li>太妃紅茶</li>
+        <li>雪藏紅茶</li>
+        <li>熟成冷露</li>
+        <li>雪花冷露</li>
+        <li>春芽冷露</li>
+        <li>春芽綠茶</li>
+        <li>春梅冰茶</li>
+        <li>冷露歐蕾</li>
+        <li>白玉歐蕾</li>
+        <li>熟成檸果</li>
+        <li>APPLE</li>
+    </ul>
+    <script>
+        //有區分大小寫
+        // function search(){
+        //     let search_txt = document.querySelector('#search').value;
+        //     console.log(search_txt);
+        //     let li = document.querySelectorAll('li');
+        //     for(let data of li){
+        //         if(data.textContent.indexOf(search_txt) > -1){
+        //             data.style.display = '';
+        //         }else{
+        //             data.style.display = 'none';
+        //         }
+        //     }
+        // }
+        //沒有區分大小寫
+        function search(){
+            let search_txt = document.querySelector('#search').value;
+            console.log(search_txt);
+            let li = document.querySelectorAll('li');
+            for(let data of li){
+                if(data.textContent.toUpperCase().indexOf(search_txt.toUpperCase()) > -1){
+                    data.style.display = '';
+                }else{
+                    data.style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
