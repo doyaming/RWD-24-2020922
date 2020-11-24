@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI";
+        }
+        .tabs {
+            width: 600px;
+            margin: auto;
+        }
+        .tab-nav {
+            display: flex;
+        }
+        .tab-link {
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px;
+            background-color: #aee6e6;
+            color: #222;
+        }
+        .tab-link.active {
+            background-color: #ffda77;
+        }
+        .tab-panel {
+            padding: 10px;
+            background-color: #ffda77;
+            display: none;
+        }
+        .tab-panel.active {
+            display: block;
+            animation: fade-in-up 1s;
+        }
+
+        @keyframes fade-in {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        @keyframes fade-in-up {
+            from {opacity: 0;transform: translateY(20%);}
+            to {opacity: 1;transform: translateY(0);}
+        }
+        @keyframes fade-in-down {
+            from {opacity: 0;transform: translateY(-20%);}
+            to {opacity: 1;transform: translateY(0);}
+        }
+        @keyframes r {
+            from {
+                opacity: 0;
+                transform: scale(0)rotate(180deg);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1)rotate(0deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <div class="tab-nav">
+            <a href="#tab-1" data-target="tab-1" class="tab-link active">link 1</a>
+            <a href="#tab-2" data-target="tab-2" class="tab-link">link 2</a>
+            <a href="#tab-3" data-target="tab-3" class="tab-link">link 3</a>
+            <a href="#tab-4" data-target="tab-4" class="tab-link">link 4</a>
+        </div>
+        <div class="tab-panel active" id="tab-1">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi distinctio sit eius excepturi commodi aut. Labore neque inventore vel dolore possimus, esse, corporis commodi deleniti totam, fugiat blanditiis ratione recusandae!
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-2">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nostrum eveniet provident expedita ullam nemo recusandae ratione velit dolorum odit delectus quo necessitatibus consequuntur dicta eaque, vero reprehenderit sit voluptatum aliquam impedit ad asperiores voluptatibus fuga. Sapiente voluptates maxime a, sint cupiditate beatae, dolorem dicta rerum laboriosam eos, facilis recusandae?
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-3">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias quas enim velit excepturi ullam totam ducimus incidunt obcaecati tempore id, vel harum. Reprehenderit nisi necessitatibus ratione temporibus qui neque vitae unde accusamus eos doloribus ea aut facere tenetur at, quasi molestiae, itaque debitis soluta? Quo, dolorum totam? Illum molestiae dolore soluta reprehenderit cum, quidem aspernatur alias beatae? Magnam, ea temporibus!
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-4">
+            <h2>title 4</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi distinctio sit eius excepturi commodi aut. 
+            </p>
+        </div>
+    </div>
+    <script>
+        let tabLinks = document.querySelectorAll('.tab-link');
+        for(let tabLink of tabLinks){
+            tabLink.onclick = function(e){
+                for(let tabLink of tabLinks){
+                    tabLink.classList.remove('active');
+                }
+                e.target.classList.add('active');
+            
+                let target = e.target.dataset.target;
+                console.log(target);
+
+                let panels = document.querySelectorAll('.tab-panel');
+                for(let panel of panels){
+                    // console.log(panel.id)
+                    // console.log(panel.getAttribute('id'));
+                    if(target === panel.id){
+                        panel.classList.add('active');
+                    }else{
+                        panel.classList.remove('active');
+                    }
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
