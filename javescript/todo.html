@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * 
+        {
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            width: 600px;
+            margin: auto;
+        }
+
+        li {
+            list-style: none;
+            padding: 10px;
+            border-bottom: 1px dotted #000;
+            display: flex;
+            justify-content: space-between;
+            background-color: #f8caca;
+        }
+        .completed {
+            text-decoration: line-through;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <input type="text">
+        <button onclick="add()">新增事項</button>
+        <ul id="todos">
+            <li class="item completed">做作業<span class="del active">刪除</span></li>
+            <li class="item">洗碗<span class="del">刪除</span></li>
+        </ul>
+    </div>
+    <script>
+        function add(){
+            let input = document.querySelector('input').value;
+            let todos = document.querySelector('#todos');
+            let li = document.createElement('li');
+            let span = document.createElement('span');
+            span.append('刪除');
+            span.classList.add('del')
+            li.append(input);
+            li.append(span);
+            li.classList.add('item');
+            todos.append(li);
+
+            document.querySelector('input').value = '';
+        }
+        function add2(){
+            let input = document.querySelector('input').value;
+            let text_node = document.createTextNode(input);
+            let todos = document.querySelector('#todos');
+            let li = document.createElement('li');
+            li.appendChild(text_node);
+            todos.appendChild(li);
+
+            document.querySelector('input').value = '';
+        }
+
+        document.body.onclick = function(e){
+            console.log(e)
+            // console.log(e.target)
+            // console.log(e.target.className)
+            if(e.target.className.indexOf('del') > -1){
+                console.log('success');
+                e.target.parentElement.remove();
+            }
+
+            // console.log(e.target.classList.includes());
+            // const s = Array.from(e.target.classList);
+            // console.log(s.includes('del'));
+
+            if(e.target.className.indexOf('item') > -1){
+                console.log('complete');
+                e.target.classList.toggle('completed');
+            }
+        }
+
+        // const li = document.querySelectorAll('li');
+        const li = document.getElementsByTagName('li');
+        console.log(li);
+        const li2 = Array.from(li);
+        console.log(li2);
+    </script>
+</body>
+</html>
