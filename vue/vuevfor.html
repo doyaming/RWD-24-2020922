@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+        .item {
+            color: #0a5;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>{{title}}</h1>
+        <div>{{content}}</div>
+        <div>{{test}}</div>
+        <ul>
+            <li v-for="(item,idx) in items" class="item">{{item}} -- {{idx}}</li>
+        </ul>
+        <template v-for="(item,idx) in items">
+            <h2>{{item}}</h2>
+            <span>{{idx}}</span>
+        </template>
+        <div v-html="test"></div>
+        <div v-text="test"></div>
+
+        <img v-bind:src="cover" alt="">
+        <img :src="cover" alt="">
+
+        <span v-for="n of 100">{{n}}</span>
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data(){
+                return {
+                    title: 'Hello Vue!!',
+                    content: '123456789',
+                    cover:'https://picsum.photos/id/34/600',
+                    test: '<b>HELLO</b>',
+                    items:[
+                        'apple',
+                        'banana',
+                        'cat',
+                        'dog'
+                    ]
+                    
+                }
+            }
+        });
+        app.mount('#app');
+
+
+        // let obj = {
+            // data:function(){
+            //     return 'Hello';
+            // }
+            // data(){
+                // return 'Hello';
+            // }
+        // }
+        // console.log(obj.data())
+    </script>
+</body>
+</html>
