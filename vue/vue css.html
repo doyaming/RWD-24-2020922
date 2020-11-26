@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+        .title {
+            color: #f00;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1 :class="{title:titleColor}">hello</h1>
+        <button @click="titleColor = !titleColor">click</button>
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return{
+                    titleColor: true
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
