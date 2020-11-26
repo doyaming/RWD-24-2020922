@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{title}}</h1>
+        <h2>{{content}}</h2>
+        <img v-bind:src="cover" alt="">
+        <img :src="cover" alt="">
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data(){
+                return {
+                    title: 'Hello Vue!!',
+                    content: '123456789',
+                    cover:'https://picsum.photos/id/34/600'
+                }
+            }
+        });
+        app.mount('#app');
+
+
+        // let obj = {
+            // data:function(){
+            //     return 'Hello';
+            // }
+            // data(){
+                // return 'Hello';
+            // }
+        // }
+        // console.log(obj.data())
+    </script>
+</body>
+</html>
