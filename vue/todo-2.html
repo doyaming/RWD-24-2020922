@@ -5,12 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@next"></script>
+    <style>
+        .completed {
+            text-decoration: line-through;
+            color: #aaa;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
         <input type="text" v-model="input"><button @click="add()">新增事項</button>
         <ul>
-            <li v-for="(item,idx) in items" @click="completed(idx)">{{item.title}} -- <span @click="del(idx)">刪除</span></li>
+            <li 
+                v-for="(item,idx) in items" 
+                @click="completed(idx)" 
+                :class="{completed:items[idx].completed}"
+            >{{item.title}} -- <span @click="del(idx)">刪除</span></li>
         </ul>
     </div>
     <script>
