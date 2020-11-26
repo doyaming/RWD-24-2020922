@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="input"><button @click="add()">新增事項</button>
+        <ul>
+            <li v-for="(item,idx) in items">{{item}} -- <span @click="del(idx)">刪除</span></li>
+        </ul>
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data(){
+                return {
+                    input:'',
+                    items:[
+                        '吃飯',
+                        '睡覺',
+                        '打咚咚'
+                    ]
+                }
+            },
+            methods:{
+                add(){
+                    this.items.push(this.input);
+                    this.input = '';
+                },
+                del(idx){
+                    this.items.splice(idx,1);
+                }
+            }
+        })
+        app.mount('#app')
+
+    </script>
+</body>
+</html>
