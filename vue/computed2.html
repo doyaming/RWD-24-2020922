@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>method</h2>
+        <button @click="number++">+</button>
+        <div>{{number}} / {{m()}}</div>
+        
+        <h2>computed</h2>
+        <button @click="number2++">+</button>
+        <div>{{number2}} / {{c}}</div>
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data(){
+                return {
+                    number:0,
+                    number2:0
+                }
+            },
+            methods:{
+                m(){
+                    console.log('methods');
+                    return this.number>5 ? 'sus':'error'
+                }
+            },
+            computed:{
+                c(){
+                    console.log('methods');
+                    return this.number2>5 ? 'sus':'error'
+                }
+            }
+
+        });
+        app.mount('#app');
+    </script>
+</body>
+</html>
