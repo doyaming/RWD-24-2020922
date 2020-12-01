@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    <!-- @add-number= v-on add-number -->
+    <div id="app">
+        <app-button @add-number="newNumber"></app-button>
+        <app-button2 @add-number="newNumber2"></app-button2>
+        <h1>{{number}}</h1>
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data(){
+                return {
+                    number: 0
+                }
+            },
+            methods:{
+                newNumber(){
+                    this.number++;
+                },
+                newNumber2(v){
+                    this.number+=v
+                }
+            }
+        });
+        app.component('app-button',{
+            template:`<button @click="add()">+</button>`,
+            methods:{
+                add(){
+                    this.$emit('add-number');
+                }
+            }
+        })
+        app.component('app-button2',{
+            template:`<button @click="add()">+</button>`,
+            methods:{
+                add(){
+                    this.$emit('add-number',2);
+                }
+            }
+        })
+        app.mount('#app');
+    </script>
+</body>
+</html>

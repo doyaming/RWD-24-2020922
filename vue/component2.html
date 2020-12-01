@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #fa0;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <app-nav></app-nav>
+        <app-title></app-title>
+        <app-box></app-box>
+    </div>
+    <template id="box">
+        <div class="box">
+            box
+        </div>
+    </template>
+    <template id="nav">
+        <nav>
+            <a href="#">link 1</a>
+            <a href="#">link 2</a>
+            <a href="#">link 3</a>
+            <a href="#">link 4</a>
+        </nav>
+    </template>
+    <script>
+        const app = Vue.createApp({
+            components:{
+                'app-box':{
+                    template:'#box'
+                },
+                'app-title':{
+                    template: `<h1>Hello Vue!!</h1>`
+                },
+                'app-nav':{
+                    template: '#nav'
+                }
+            }
+        });
+
+        app.mount('#app');
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    <div id="app">
+   <app-title :test="title" :user="admin"></app-title>
+    </div>
+    <script>
+      const app = Vue.createApp({
+          data(){
+              return {
+                  title:'welcome come to hello vue ',
+                  admin:'keviner'
+              }
+          }
+      });
+      app.component('app-title',{
+          props:['test','user'],
+          template:`<h1>{{ test }}</h1>
+            <h2>{{ user }}</h2>`,
+      })
+      app.mount('#app');
+    </script>
+</body>
+</html>
