@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app">
+        <todo-input @add-item="newItem"></todo-input>
+        <ul>
+            <todo-items v-for="item in items" :todoitem="item"></todo-items>
+        </ul>
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data(){
+                return {
+                    items:[
+                        {
+                            title:'吃飯',
+                            completed:false
+                        },
+                        {
+                            title:'洗衣服',
+                            completed:true
+                        },
+                        {
+                            title:'寄信',
+                            completed:false
+                        },
+                        {
+                            title:'寄信',
+                            completed:false
+                        }
+                    ]
+                }
+            },
+            methods:{
+                newItem(v){
+                    this.items.push({
+                        title:v,
+                        completed:false
+                    });
+                }
+            }
+        });
+        app.component('todo-input',{
+            template:`
+                <input type="text" v-model="input">
+                <button @click="addItem()">新增事項</button>{{input}}`,
+            data(){
+                return {
+                    input:''
+                }
+            },
+            methods:{
+                addItem(){
+                    this.$emit('add-item',this.input);
+                    this.input = '';
+                }
+            }
+        });
+        app.component('todo-items',{
+            props:['todoitem'],
+            template: `<li>{{todoitem.title}} --- <span>刪除</span></li>`,
+        })
+        app.mount('#app');
+
+    </script>
+</body>
+</html>
