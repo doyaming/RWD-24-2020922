@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Gill Sans MT";
+        }
+        .container {
+            width: 600px;
+            margin: auto;
+        }
+        h2 {
+            padding: 10px;
+            background-color: #a2ff6d;
+            border-bottom: 1px solid #1e3511;
+            transition: .3s;
+        }
+        h2:hover {
+            background-color: #ffee00;
+        }
+        h2.active {
+            background-color: #ff73002d;
+        }
+        p {
+            padding: 10px;
+            background-color: #f0ffc6;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>title 1</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium quasi molestiae esse autem ut ex fugiat suscipit accusamus error eligendi ad tempore, nisi similique labore in totam amet necessitatibus rerum!
+        </p>
+        <h2>title 2</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia voluptatibus sed, tenetur pariatur facere quod deserunt, incidunt perferendis temporibus, harum culpa. Tempora in eum sed accusantium, totam dolore cum dolor voluptates magni numquam facere non facilis nobis quaerat iusto, velit quis ipsum minima fuga tempore similique? Sit quibusdam repellendus magnam!
+        </p>
+        <h2>title 3</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos commodi qui nostrum quae nihil blanditiis animi maxime itaque minus. Blanditiis suscipit, explicabo recusandae tempora officia illum at excepturi. Repellendus, laborum.
+        </p>
+        <h2>title 4</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ullam placeat voluptate. Expedita nemo dignissimos assumenda culpa officiis minus. Dicta voluptatibus eligendi minus mollitia veniam hic, incidunt labore. Voluptatem architecto hic modi earum saepe aliquid vel, obcaecati id aperiam iusto? Dolorum maiores velit eveniet harum facere accusantium. Eos ad repellendus temporibus consequuntur, repellat deleniti praesentium incidunt optio totam provident ipsum.
+        </p>
+    </div>
+    <script>
+        $(function(){
+            $('h2').click(function(){
+                // $(this).next().toggle(600);
+                // $(this).next().fadeToggle();
+                $(this).next().slideToggle(500);
+                $(this).toggleClass('active');
+            })
+        })
+    </script>
+</body>
+</html>
