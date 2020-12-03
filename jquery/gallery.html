@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <style>
+        img {
+            border: 5px solid #000;
+            transition: .5s;
+        }
+        .thumb.active {
+            border: 5px solid #ffbb00;
+            transition: .5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="images/4643301_500.jpg" class="picture">
+        <div class="thumbs">
+            <img src="images/4643301_500.jpg" width="150" class="thumb active">
+            <img src="images/4643302_500.jpg" width="150" class="thumb">
+            <img src="images/4643303_500.jpg" width="150" class="thumb">
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('.thumb').click(function(){
+                let newImg = $(this).attr('src');
+                $('.picture').attr('src',newImg);
+                $('.thumb').removeClass('active');
+                $(this).addClass('active')
+            })
+        })
+    </script>
+</body>
+</html>
