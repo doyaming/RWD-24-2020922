@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">title123</h1>
+    <p class="content">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi enim ipsum facere facilis quidem debitis laborum. Maiores, velit? Quae, nostrum beatae sapiente ab aliquam necessitatibus quos unde assumenda aspernatur adipisci!
+    </p>
+    <div id="list">
+        <ul class="items">
+            <li class="item"><a href="#">item 1</a></li>
+            <li class="item"><a href="#">item 2</a></li>
+            <li class="item"><a href="#">item 3</a></li>
+            <li class="item"><a href="#">item 4</a></li>
+            <li class="item"><a href="#">item 5</a></li>
+        </ul>
+    </div>
+    <script>
+        let items = document.querySelector('.items');
+        // console.log(items.parentElement);
+        // console.log(items.parentNode);
+
+        let list = document.querySelector('#list');
+        // 同輩元素
+        // console.log(list.nextElementSibling);
+        // console.log(list.previousElementSibling);
+        
+        // 同輩節點(元素、註解、換行)
+        // console.log(list.nextSibling);
+        // console.log(list.previousSibling);
+
+        //子元素
+        console.log(items.children);
+        
+        //子節點
+        console.log(items.childNodes);
+    </script>
+</body>
+</html>
