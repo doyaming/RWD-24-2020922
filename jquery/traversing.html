@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <h1 id="title">title123</h1>
+    <p class="content">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi enim ipsum facere facilis quidem debitis laborum. Maiores, velit? Quae, nostrum beatae sapiente ab aliquam necessitatibus quos unde assumenda aspernatur adipisci!
+    </p>
+    <div id="list">
+        <ul class="items">
+            <li class="item"><a href="#">item 1</a></li>
+            <li class="item"><a href="#">item 2</a></li>
+            <li class="item"><a href="#">item 3</a></li>
+            <li class="item"><a href="#">item 4</a></li>
+            <li class="item"><a href="#">item 5</a></li>
+        </ul>
+    </div>
+    <script>
+        $(function(){
+            // console.log($('.items').parent());
+            // console.log($('.items').parents());
+            // console.log($('.items').parents('body'));
+
+            // console.log($('#list').siblings());
+            // console.log($('#list').siblings('.content'));
+            // console.log($('#list').next());
+            // console.log($('#list').prev());
+            // console.log($('.item').eq(0).text());
+            // console.log($('.item').eq(1).text());
+            // console.log($('#title').eq(1).text());
+
+            console.log($('#list').find('.item'));
+            console.log($('#list').children());
+
+        })
+    </script>
+</body>
+</html>
