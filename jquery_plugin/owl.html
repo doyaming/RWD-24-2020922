@@ -19,6 +19,27 @@
             width: 1000px;
             margin: auto;
         }
+        .owl-theme .owl-nav [class*=owl-] {
+            transition: .3s;
+            outline: 0;
+        }
+        .owl-theme .owl-nav [class*=owl-]:hover {
+            background: initial;
+            color: #fbe414;
+        }
+        .owl-dot {
+            outline: 0;
+        }
+        .owl-theme .owl-dots .owl-dot span {
+            background: #07110f;
+            border-radius: initial;
+            width: 10px;
+            height: 10px;
+           
+        }
+        .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+            background: #ffab23;
+        }
     </style>
 </head>
 <body>
@@ -78,7 +99,7 @@
                 loop: true,
                 stagePadding:0 ,
                 dots: true,
-                autoplay: true,
+                autoplay: false,
                 autoplayTimeout: 5000,
                 autoplaySpeed: 1500,
                 dotsSpeed: 600,
@@ -86,14 +107,14 @@
                 nav: true,
                 navSpeed: 600,
                 navText:['<i class="fas fa-chevron-circle-left fa-2x"></i>','<i class="fas fa-chevron-circle-right fa-2x"></i>'],
-                animateOut:'slideOutDown',
-                animateIn:'rotateIn'
+                animateOut:'fadeOut',
+                animateIn:'fadeIn'
             });
 
             $('#products').owlCarousel({
                 items: 4,
                 margin: 30,
-               
+                center: true
             })
         })
 
