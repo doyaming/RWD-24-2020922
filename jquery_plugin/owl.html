@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <style>
+        #slider {
+            width: 1000px;
+            margin: auto;
+        }
+        #products {
+            width: 1000px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="slider" class="owl-carousel owl-theme">
+        <img src="https://picsum.photos/id/43/1600/800" alt="">
+        <img src="https://picsum.photos/id/13/1600/800" alt="">
+        <img src="https://picsum.photos/id/23/1600/800" alt="">
+        <img src="https://picsum.photos/id/33/1600/800" alt="">
+        <img src="https://picsum.photos/id/53/1600/800" alt="">
+    </div>
+    <div id="products" class="owl-carousel owl-theme">
+        <div>
+            <img src="https://picsum.photos/id/43/300/" alt="">
+            <span>title 1</span>
+        </div>
+        <div>
+            <img src="https://picsum.photos/id/44/300/" alt="">
+            <span>title 2</span>
+        </div>
+        <div>
+            <img src="https://picsum.photos/id/45/300/" alt="">
+            <span>title 3</span>
+        </div>
+        <div>
+            <img src="https://picsum.photos/id/46/300/" alt="">
+            <span>title 4</span>
+        </div>
+        <div>
+            <img src="https://picsum.photos/id/47/300/" alt="">
+            <span>title 5</span>
+        </div>
+        <div>
+            <img src="https://picsum.photos/id/48/300/" alt="">
+            <span>title 6</span>
+        </div>
+        <div>
+            <img src="https://picsum.photos/id/49/300/" alt="">
+            <span>title 7</span>
+        </div>
+        <div>
+            <img src="https://picsum.photos/id/50/300/" alt="">
+            <span>title 8</span>
+        </div>
+        <div>
+            <img src="https://picsum.photos/id/51/300/" alt="">
+            <span>title 9</span>
+        </div>
+        <div>
+            <img src="https://picsum.photos/id/52/300/" alt="">
+            <span>title 10</span>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('#slider').owlCarousel({
+                items: 1,
+                loop: true,
+                stagePadding:0 ,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 1500,
+                dotsSpeed: 600,
+
+                nav: true,
+                navSpeed: 600,
+                navText:['<i class="fas fa-chevron-circle-left fa-2x"></i>','<i class="fas fa-chevron-circle-right fa-2x"></i>'],
+                animateOut:'slideOutDown',
+                animateIn:'rotateIn'
+            });
+
+            $('#products').owlCarousel({
+                items: 4,
+                margin: 30,
+               
+            })
+        })
+
+    </script>
+</body>
+</html>
